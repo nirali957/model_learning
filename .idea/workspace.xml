@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2de430c6-d5db-4550-b4cd-9ee2aa8742c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/app_data/episode_list.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app_data/list_data_one.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app_data/list_data_two.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/data/model/episode_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/data/model/production_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/data/model/stock_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/production_calling.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/stock_model_calling.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/model_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/model_app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/model_app_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/model_app_android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/model/common_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/model/common_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/model_calling_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/model_calling_screen.dart" afterDir="false" />
-    </list>
+    <list default="true" id="2de430c6-d5db-4550-b4cd-9ee2aa8742c9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
