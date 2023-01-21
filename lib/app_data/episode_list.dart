@@ -1,5 +1,5 @@
 class EpisodeData {
-  Map<String, dynamic> episodelist = {
+  Map<String, dynamic> episodeList = {
     "info": {
       "count": 1,
       "pages": 1,

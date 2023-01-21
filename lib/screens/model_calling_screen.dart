@@ -16,7 +16,7 @@ class _ModelCallingScreenState extends State<ModelCallingScreen> {
   @override
   void initState() {
     // TODO: implement initState
-    commonModel = CommonModel.fromJson(AppData.listdata);
+    commonModel = CommonModel.fromJson(AppData.listData);
     super.initState();
   }
 
@@ -78,12 +78,11 @@ class _ModelCallingScreenState extends State<ModelCallingScreen> {
                     color: Colors.purple,
                     width: 1.5,
                   ),
-                  gradient:  const LinearGradient(
+                  gradient: const LinearGradient(
                     colors: [
                       Colors.white,
                       Colors.purple,
                       Colors.white,
-
                     ],
                   ),
                 ),

@@ -1,10 +1,9 @@
-
-class AppData{
-  static  Map<String, dynamic> listdata={
+class AppData {
+  static Map<String, dynamic> listData = {
     "firm_name": "yug fashion",
     "location": "surat",
     "ceo": "udaybhai",
-    "product":"ladies pant",
+    "product": "ladies pant",
     "production_list": [
       {
         "type": "palazzo",
