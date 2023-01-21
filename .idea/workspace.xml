@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2de430c6-d5db-4550-b4cd-9ee2aa8742c9" name="Changes" comment="" />
+    <list default="true" id="2de430c6-d5db-4550-b4cd-9ee2aa8742c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/app_data/episode_list.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app_data/list_data_one.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app_data/list_data_two.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/model/episode_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/model/production_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/data/model/stock_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/production_calling.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/stock_model_calling.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/model_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/model_app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/model_app_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/model_app_android.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/model/common_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/model/common_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/model_calling_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/model_calling_screen.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,27 +32,28 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2KRj0BYlbOkTeOjE8pfJWvmajgE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "D:/Development/Projects/model_app",
-    "settings.editor.selected.configurable": "dart.settings",
-    "show.migrate.to.gradle.popup": "false"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
@@ -54,5 +70,16 @@
       <updated>1673944065835</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

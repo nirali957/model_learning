@@ -19,6 +19,7 @@ class _ModelCallingScreenState extends State<ModelCallingScreen> {
     commonModel = CommonModel.fromJson(AppData.listdata);
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +61,6 @@ class _ModelCallingScreenState extends State<ModelCallingScreen> {
               fontSize: 20,
             ),
           ),
-
           Expanded(
             child: ListView.separated(
               itemCount: commonModel!.productionList!.length,
@@ -73,7 +73,19 @@ class _ModelCallingScreenState extends State<ModelCallingScreen> {
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: Colors.yellow,
-                  borderRadius: BorderRadius.circular(20)
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: Colors.purple,
+                    width: 1.5,
+                  ),
+                  gradient:  const LinearGradient(
+                    colors: [
+                      Colors.white,
+                      Colors.purple,
+                      Colors.white,
+
+                    ],
+                  ),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -105,7 +117,6 @@ class _ModelCallingScreenState extends State<ModelCallingScreen> {
                   ],
                 ),
               ),
-
             ),
           )
         ],
