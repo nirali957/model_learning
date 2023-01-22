@@ -1,7 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:image_picker_gallery_camera/image_picker_gallery_camera.dart';
+import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ImagePickerScreen extends StatefulWidget {
   const ImagePickerScreen({Key? key}) : super(key: key);
@@ -12,86 +13,106 @@ class ImagePickerScreen extends StatefulWidget {
 
 class _ImagePickerScreenState extends State<ImagePickerScreen> {
   File? image;
-
-  Future getImage(ImgSource source) async {
-    var image = await ImagePickerGC.pickImage(
-        enableCloseButton: true,
-        closeIcon: const Icon(
-          Icons.close,
-          color: Colors.red,
-          size: 12,
-        ),
-        context: context,
-        source: source,
-        barrierDismissible: true,
-        cameraIcon: const Icon(
-          Icons.camera_alt,
-          color: Colors.red,
-        ), //cameraIcon and galleryIcon can change. If no icon provided default icon will be present
-        cameraText: const Text(
-          "From Camera",
-          style: TextStyle(color: Colors.red),
-        ),
-        galleryText: const Text(
-          "From Gallery",
-          style: TextStyle(color: Colors.blue),
-        ));
-    setState(() {
-      image = image;
-    });
+  Future pickImage(ImageSource source) async {
+    try {
+      final image = await ImagePicker().pickImage(source: source);
+      if (image == null) return;
+      final imageTemporary = File(image.path);
+      setState(() {
+        this.image = imageTemporary;
+      });
+    } on PlatformException catch (e) {
+      debugPrint("Failed to pick image $e");
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Image picker'),
-      ),
-      body: Center(
-        child: SingleChildScrollView(
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    double textSize = MediaQuery.textScaleFactorOf(context);
+    return SafeArea(
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: const Color(0xffffffff),
+        body: Padding(
+          padding: EdgeInsets.only(left: height / 40, right: height / 40),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () => getImage(ImgSource.Gallery),
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.blue,
-                  ),
-                  child: Text(
-                    "From Gallery".toUpperCase(),
-                    style: const TextStyle(color: Colors.white),
-                  ),
+              Padding(
+                padding: EdgeInsets.only(top: height / 20, bottom: height / 27),
+                child: Stack(
+                  alignment: Alignment.bottomRight,
+                  children: [
+                    ClipOval(
+                      child: Container(
+                        height: 100,
+                        width: 100,
+                        color: Colors.black12,
+                        child: image != null
+                            ? Image.file(
+                                image!,
+                                height: 150,
+                                width: 150,
+                                fit: BoxFit.cover,
+                              )
+                            : const Icon(
+                                Icons.person,
+                                size: 60,
+                                color: Colors.grey,
+                              ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        showModalBottomSheet(
+                          backgroundColor: Colors.transparent,
+                          context: context,
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(25.0),
+                            ),
+                          ),
+                          builder: (context) {
+                            return SizedBox(
+                              height: 100,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: [
+                                  ElevatedButton(
+                                    onPressed: () => pickImage(ImageSource.camera),
+                                    child: const Text(
+                                      "camera",
+                                    ),
+                                  ),
+                                  ElevatedButton(
+                                    onPressed: () {
+                                      pickImage(ImageSource.gallery);
+                                    },
+                                    child: const Text(
+                                      "gallary",
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        );
+                      },
+                      child: Container(
+                        height: 30,
+                        width: 30,
+                        decoration: const BoxDecoration(color: Color(0xFF234F68), shape: BoxShape.circle),
+                        child: const Icon(
+                          Icons.edit,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              Container(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () => getImage(ImgSource.Camera),
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.deepPurple,
-                  ),
-                  child: Text(
-                    "From Camera".toUpperCase(),
-                    style: const TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-              Container(
-                width: 300,
-                child: ElevatedButton(
-                  onPressed: () => getImage(ImgSource.Both),
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.red,
-                  ),
-                  child: Text(
-                    "Both".toUpperCase(),
-                    style: const TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-              image != null ? Image.file(File(image!.path)) : Container(),
             ],
           ),
         ),
