@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2de430c6-d5db-4550-b4cd-9ee2aa8742c9" name="Changes" comment="image">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+    <list default="true" id="2de430c6-d5db-4550-b4cd-9ee2aa8742c9" name="Changes" comment="picker">
+      <change afterPath="$PROJECT_DIR$/lib/screens/episode_calling_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/model/episode_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/model/episode_model.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/image_picker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/image_picker.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674378195329</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="picker">
+      <created>1674380329603</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674380329603</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,6 +111,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="capital" />
     <MESSAGE value="image" />
-    <option name="LAST_COMMIT_MESSAGE" value="image" />
+    <MESSAGE value="image pic" />
+    <MESSAGE value="picker" />
+    <option name="LAST_COMMIT_MESSAGE" value="picker" />
   </component>
 </project>

@@ -102,9 +102,12 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
                       child: Container(
                         height: 30,
                         width: 30,
-                        decoration: const BoxDecoration(color: Color(0xFF234F68), shape: BoxShape.circle),
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF689436),
+                          shape: BoxShape.circle,
+                        ),
                         child: const Icon(
-                          Icons.edit,
+                          Icons.edit_sharp,
                           color: Colors.white,
                           size: 16,
                         ),
