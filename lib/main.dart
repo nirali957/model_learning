@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:model_app/screens/image_picker.dart';
+import 'package:model_app/screens/put_user_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,10 @@ class MyApp extends StatelessWidget {
       // home: const ModelCallingScreen(),
       // home: const StockModelScreen(),
       // home: const ProductionCallingScreen(),
-      home: const ImagePickerScreen(),
+      // home: const ImagePickerScreen(),
+      // home: const UserScreen(),
+      // home: const PostUserScreen(),
+      home: const PutUserScreen(),
     );
   }
 }
